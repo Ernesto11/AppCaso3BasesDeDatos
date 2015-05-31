@@ -1,0 +1,151 @@
+
+header{
+    margin-left: 345px ;
+    margin-top:-30px;
+    width: 650px;
+    height: 130px;
+    
+}
+
+div.contenedor{
+    width: 130px;
+    height: 150px;
+    float: left;
+    -webkit-transition: height 0.4s;
+    transition: height 0.4s;
+}
+
+
+img.icon{
+    display: block;
+    margin: 20px auto;
+    background-color: rgba(255,255,255,0.5);
+    width: 50px;
+    padding: 10px;
+    border-radius: 30%;
+    box-shadow: 0px 0px 0px 30px rgba(255,255,255,0);
+    transition: box-shadow 0.4s;
+    -webkit-transition: box-shadow 0.4s;
+}
+
+
+
+p.texto{
+    font-size: 1.2em;
+    color:white;
+    text-align: center;
+    padding-top: 0px;
+    opacity: 0.6;
+    transition: padding-top 0.4s;
+    font-weight: 200;
+}
+
+div.contenedor:hover{
+    height:160px;
+
+}
+
+div.contenedor:hover p.texto{
+    padding-top: 10px;
+    opacity: 1;
+
+}
+
+div.contenedor:hover img.icon{
+    box-shadow: 0px 0px 0px 0px rgba(255,255,255,0.6);
+     -webkit-box-shadow: 0px 0px 0px 0px rgba(255,255,255,0.6);
+}
+
+body{
+    background-color: rgb(31, 0, 154)
+}
+
+p.titulo{
+    text-align:center;
+    margin-top:5px;
+    color: white; 
+    font-size: xx-large;
+    font-weight: bold; 
+   
+}
+
+td.campoTabla{
+    color: white;
+    margin:20px;
+    font-size:1.2em;
+}
+
+
+
+table.tabla{
+    table-layout: auto;
+    position: relative;
+     
+    left: 8px;
+    height: 338px; 
+    width: 800px;
+}
+
+
+
+p.subTituloAct1{
+    color: white;
+    padding-left:8px;
+    margin-top:60px;
+    font-size:1.2em;
+}
+
+
+
+div.seccionInsertar{
+    display:none;
+    margin-top:-20px;
+    margin-left:260px
+     
+}
+
+div.seccionSeleccionar{
+    display:none;
+    margin-top:80px;
+    margin-left:40px
+     
+}
+
+div.seccionActualizar{
+    display:none;
+    
+    margin-left:260px
+     
+}
+
+div.seccionEliminar{
+    display:none;
+    margin-left:260px
+     
+}
+
+
+
+div.buscar{
+    
+    width: 2000px;
+    height:10px;
+    color: white;
+    font-size:1em;
+    margin-bottom:20px;
+    display:none;
+            
+}
+
+div.select{
+    
+    float: left;
+    
+}
+
+
+div.acercaDe{
+    display:none;
+    margin-top:100px;
+    margin-left:60px;
+}

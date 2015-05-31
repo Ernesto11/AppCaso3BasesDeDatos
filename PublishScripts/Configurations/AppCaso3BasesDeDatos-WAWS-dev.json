@@ -1,0 +1,21 @@
+{
+    "environmentSettings": {
+        "webSite": {
+            "name": "AppCaso3BasesDeDatos",
+            "location": "North Central US"
+        },
+        "databases": [
+            {
+                "connectionStringName": "DefaultConnection",
+                "databaseName": "AppCaso3BasesDeDatos_db",
+                "serverName": "nfc89bk7cw",
+                "user": "admin11",
+                "password": "",
+                "edition": "",
+                "size": "",
+                "collation": "",
+                "location": "North Central US"
+            }
+        ]
+    }
+}
