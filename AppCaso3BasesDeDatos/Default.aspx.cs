@@ -20,15 +20,7 @@ namespace AppCaso3BasesDeDatos
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-           
-            
-
-           
         }
-
-
-        
 
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -454,7 +446,7 @@ namespace AppCaso3BasesDeDatos
 
             SqlConnection sqlcon = new SqlConnection(ConfigurationManager.ConnectionStrings["SQLAzureConnection"].ConnectionString);
 
-            SqlDataAdapter sqladap = new SqlDataAdapter("select * from caso2.llamada where id_llamada= " + llamada, sqlcon);
+            SqlDataAdapter sqladap = new SqlDataAdapter("SELECT L.ID_LLAMADA AS LLAMADA,C.NOMBRE AS CLIENTE,E.NOMBRE AS EMPLEADO,P.NOMBRE AS PRODUCTO,PR.TIPO AS PROBLEMA,S.DESCRIPCION AS SOLUCION,L.FOLLOW_UP AS SEGUIMIENTO, L.ESTADO_RESOLUCION_LLAMADA AS ESTADO_LLAMADA FROM CASO2.LLAMADA L INNER JOIN CASO2.CLIENTE C ON L.ID_CLIENTE = C.ID_CLIENTE INNER JOIN CASO2.EMPLEADO E ON E.ID_EMPLEADO = L.ID_EMPLEADO INNER JOIN CASO2.PRODUCTO P ON P.ID_PRODUCTO = L.ID_PRODUCTO INNER JOIN CASO2.PROBLEMA PR ON PR.ID_PROBLEMA = L.ID_PROBLEMA INNER JOIN CASO2.SOLUCION S ON S.ID_SOLUCION = L.ID_SOLUCION WHERE id_llamada = " + llamada, sqlcon);
             DataSet dset = new DataSet();
             sqladap.Fill(dset, "CASO2.LLAMADA");
             GridView1.DataSource = dset.Tables["CASO2.LLAMADA"].DefaultView;
@@ -470,7 +462,7 @@ namespace AppCaso3BasesDeDatos
 
             SqlConnection sqlcon = new SqlConnection(ConfigurationManager.ConnectionStrings["SQLAzureConnection"].ConnectionString);
 
-            SqlDataAdapter sqladap = new SqlDataAdapter("select * from caso2.llamada where id_cliente= " + cliente, sqlcon);
+            SqlDataAdapter sqladap = new SqlDataAdapter("SELECT L.ID_LLAMADA AS LLAMADA,C.NOMBRE AS CLIENTE,E.NOMBRE AS EMPLEADO,P.NOMBRE AS PRODUCTO,PR.TIPO AS PROBLEMA,S.DESCRIPCION,L.FOLLOW_UP AS SEGUIMIENTO, L.ESTADO_RESOLUCION_LLAMADA AS ESTADO_LLAMADA FROM CASO2.LLAMADA L INNER JOIN CASO2.CLIENTE C ON L.ID_CLIENTE = C.ID_CLIENTE INNER JOIN CASO2.EMPLEADO E ON E.ID_EMPLEADO = L.ID_EMPLEADO INNER JOIN CASO2.PRODUCTO P ON P.ID_PRODUCTO = L.ID_PRODUCTO INNER JOIN CASO2.PROBLEMA PR ON PR.ID_PROBLEMA = L.ID_PROBLEMA INNER JOIN CASO2.SOLUCION S ON S.ID_SOLUCION = L.ID_SOLUCION WHERE l.id_cliente = " + cliente, sqlcon);
             DataSet dset = new DataSet();
             sqladap.Fill(dset, "CASO2.LLAMADA");
             GridView1.DataSource = dset.Tables["CASO2.LLAMADA"].DefaultView;
@@ -484,7 +476,7 @@ namespace AppCaso3BasesDeDatos
 
             SqlConnection sqlcon = new SqlConnection(ConfigurationManager.ConnectionStrings["SQLAzureConnection"].ConnectionString);
 
-            SqlDataAdapter sqladap = new SqlDataAdapter("select * from caso2.llamada where id_empleado= " + empleado, sqlcon);
+            SqlDataAdapter sqladap = new SqlDataAdapter("SELECT L.ID_LLAMADA AS LLAMADA,C.NOMBRE AS CLIENTE,E.NOMBRE AS EMPLEADO,P.NOMBRE AS PRODUCTO,PR.TIPO AS PROBLEMA,S.DESCRIPCION,L.FOLLOW_UP AS SEGUIMIENTO, L.ESTADO_RESOLUCION_LLAMADA AS ESTADO_LLAMADA FROM CASO2.LLAMADA L INNER JOIN CASO2.CLIENTE C ON L.ID_CLIENTE = C.ID_CLIENTE INNER JOIN CASO2.EMPLEADO E ON E.ID_EMPLEADO = L.ID_EMPLEADO INNER JOIN CASO2.PRODUCTO P ON P.ID_PRODUCTO = L.ID_PRODUCTO INNER JOIN CASO2.PROBLEMA PR ON PR.ID_PROBLEMA = L.ID_PROBLEMA INNER JOIN CASO2.SOLUCION S ON S.ID_SOLUCION = L.ID_SOLUCION WHERE l.id_empleado = " + empleado, sqlcon);
             DataSet dset = new DataSet();
             sqladap.Fill(dset, "CASO2.LLAMADA");
             GridView1.DataSource = dset.Tables["CASO2.LLAMADA"].DefaultView;
@@ -498,7 +490,7 @@ namespace AppCaso3BasesDeDatos
 
             SqlConnection sqlcon = new SqlConnection(ConfigurationManager.ConnectionStrings["SQLAzureConnection"].ConnectionString);
 
-            SqlDataAdapter sqladap = new SqlDataAdapter("select * from caso2.llamada where id_producto= " + producto, sqlcon);
+            SqlDataAdapter sqladap = new SqlDataAdapter("SELECT L.ID_LLAMADA AS LLAMADA,C.NOMBRE AS CLIENTE,E.NOMBRE AS EMPLEADO,P.NOMBRE AS PRODUCTO,PR.TIPO AS PROBLEMA,S.DESCRIPCION,L.FOLLOW_UP AS SEGUIMIENTO, L.ESTADO_RESOLUCION_LLAMADA AS ESTADO_LLAMADA FROM CASO2.LLAMADA L INNER JOIN CASO2.CLIENTE C ON L.ID_CLIENTE = C.ID_CLIENTE INNER JOIN CASO2.EMPLEADO E ON E.ID_EMPLEADO = L.ID_EMPLEADO INNER JOIN CASO2.PRODUCTO P ON P.ID_PRODUCTO = L.ID_PRODUCTO INNER JOIN CASO2.PROBLEMA PR ON PR.ID_PROBLEMA = L.ID_PROBLEMA INNER JOIN CASO2.SOLUCION S ON S.ID_SOLUCION = L.ID_SOLUCION WHERE l.id_producto = " + producto, sqlcon);
             DataSet dset = new DataSet();
             sqladap.Fill(dset, "CASO2.LLAMADA");
             GridView1.DataSource = dset.Tables["CASO2.LLAMADA"].DefaultView;
@@ -512,7 +504,7 @@ namespace AppCaso3BasesDeDatos
 
             SqlConnection sqlcon = new SqlConnection(ConfigurationManager.ConnectionStrings["SQLAzureConnection"].ConnectionString);
 
-            SqlDataAdapter sqladap = new SqlDataAdapter("select * from caso2.llamada where id_problema= " + problema, sqlcon);
+            SqlDataAdapter sqladap = new SqlDataAdapter("SELECT L.ID_LLAMADA AS LLAMADA,C.NOMBRE AS CLIENTE,E.NOMBRE AS EMPLEADO,P.NOMBRE AS PRODUCTO,PR.TIPO AS PROBLEMA,S.DESCRIPCION,L.FOLLOW_UP AS SEGUIMIENTO, L.ESTADO_RESOLUCION_LLAMADA AS ESTADO_LLAMADA FROM CASO2.LLAMADA L INNER JOIN CASO2.CLIENTE C ON L.ID_CLIENTE = C.ID_CLIENTE INNER JOIN CASO2.EMPLEADO E ON E.ID_EMPLEADO = L.ID_EMPLEADO INNER JOIN CASO2.PRODUCTO P ON P.ID_PRODUCTO = L.ID_PRODUCTO INNER JOIN CASO2.PROBLEMA PR ON PR.ID_PROBLEMA = L.ID_PROBLEMA INNER JOIN CASO2.SOLUCION S ON S.ID_SOLUCION = L.ID_SOLUCION WHERE l.id_problema= " + problema, sqlcon);
             DataSet dset = new DataSet();
             sqladap.Fill(dset, "CASO2.LLAMADA");
             GridView1.DataSource = dset.Tables["CASO2.LLAMADA"].DefaultView;
@@ -526,7 +518,7 @@ namespace AppCaso3BasesDeDatos
 
             SqlConnection sqlcon = new SqlConnection(ConfigurationManager.ConnectionStrings["SQLAzureConnection"].ConnectionString);
 
-            SqlDataAdapter sqladap = new SqlDataAdapter("select * from caso2.llamada where id_solucion= " + solucion, sqlcon);
+            SqlDataAdapter sqladap = new SqlDataAdapter("SELECT L.ID_LLAMADA AS LLAMADA,C.NOMBRE AS CLIENTE,E.NOMBRE AS EMPLEADO,P.NOMBRE AS PRODUCTO,PR.TIPO AS PROBLEMA,S.DESCRIPCION,L.FOLLOW_UP AS SEGUIMIENTO, L.ESTADO_RESOLUCION_LLAMADA AS ESTADO_LLAMADA FROM CASO2.LLAMADA L INNER JOIN CASO2.CLIENTE C ON L.ID_CLIENTE = C.ID_CLIENTE INNER JOIN CASO2.EMPLEADO E ON E.ID_EMPLEADO = L.ID_EMPLEADO INNER JOIN CASO2.PRODUCTO P ON P.ID_PRODUCTO = L.ID_PRODUCTO INNER JOIN CASO2.PROBLEMA PR ON PR.ID_PROBLEMA = L.ID_PROBLEMA INNER JOIN CASO2.SOLUCION S ON S.ID_SOLUCION = L.ID_SOLUCION WHERE l.id_solucion= " + solucion, sqlcon);
             DataSet dset = new DataSet();
             sqladap.Fill(dset, "CASO2.LLAMADA");
             GridView1.DataSource = dset.Tables["CASO2.LLAMADA"].DefaultView;
@@ -540,7 +532,7 @@ namespace AppCaso3BasesDeDatos
 
             SqlConnection sqlcon = new SqlConnection(ConfigurationManager.ConnectionStrings["SQLAzureConnection"].ConnectionString);
 
-            SqlDataAdapter sqladap = new SqlDataAdapter("select * from caso2.llamada where FOLLOW_UP= " + s, sqlcon);
+            SqlDataAdapter sqladap = new SqlDataAdapter("SELECT L.ID_LLAMADA AS LLAMADA,C.NOMBRE AS CLIENTE,E.NOMBRE AS EMPLEADO,P.NOMBRE AS PRODUCTO,PR.TIPO AS PROBLEMA,S.DESCRIPCION,L.FOLLOW_UP AS SEGUIMIENTO, L.ESTADO_RESOLUCION_LLAMADA AS ESTADO_LLAMADA FROM CASO2.LLAMADA L INNER JOIN CASO2.CLIENTE C ON L.ID_CLIENTE = C.ID_CLIENTE INNER JOIN CASO2.EMPLEADO E ON E.ID_EMPLEADO = L.ID_EMPLEADO INNER JOIN CASO2.PRODUCTO P ON P.ID_PRODUCTO = L.ID_PRODUCTO INNER JOIN CASO2.PROBLEMA PR ON PR.ID_PROBLEMA = L.ID_PROBLEMA INNER JOIN CASO2.SOLUCION S ON S.ID_SOLUCION = L.ID_SOLUCION WHERE l.FOLLOW_UP= " + s, sqlcon);
             DataSet dset = new DataSet();
             sqladap.Fill(dset, "CASO2.LLAMADA");
             GridView1.DataSource = dset.Tables["CASO2.LLAMADA"].DefaultView;
@@ -554,7 +546,7 @@ namespace AppCaso3BasesDeDatos
 
             SqlConnection sqlcon = new SqlConnection(ConfigurationManager.ConnectionStrings["SQLAzureConnection"].ConnectionString);
 
-            SqlDataAdapter sqladap = new SqlDataAdapter("select * from caso2.llamada where ESTADO_RESOLUCION_LLAMADA= " + estado, sqlcon);
+            SqlDataAdapter sqladap = new SqlDataAdapter("SELECT L.ID_LLAMADA AS LLAMADA,C.NOMBRE AS CLIENTE,E.NOMBRE AS EMPLEADO,P.NOMBRE AS PRODUCTO,PR.TIPO AS PROBLEMA,S.DESCRIPCION,L.FOLLOW_UP AS SEGUIMIENTO, L.ESTADO_RESOLUCION_LLAMADA AS ESTADO_LLAMADA FROM CASO2.LLAMADA L INNER JOIN CASO2.CLIENTE C ON L.ID_CLIENTE = C.ID_CLIENTE INNER JOIN CASO2.EMPLEADO E ON E.ID_EMPLEADO = L.ID_EMPLEADO INNER JOIN CASO2.PRODUCTO P ON P.ID_PRODUCTO = L.ID_PRODUCTO INNER JOIN CASO2.PROBLEMA PR ON PR.ID_PROBLEMA = L.ID_PROBLEMA INNER JOIN CASO2.SOLUCION S ON S.ID_SOLUCION = L.ID_SOLUCION WHERE l.ESTADO_RESOLUCION_LLAMADA= " + estado, sqlcon);
             DataSet dset = new DataSet();
             sqladap.Fill(dset, "CASO2.LLAMADA");
             GridView1.DataSource = dset.Tables["CASO2.LLAMADA"].DefaultView;
